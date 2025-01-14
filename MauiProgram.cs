@@ -22,6 +22,9 @@ namespace mauinewfirebase
 #if IOS
                 events.AddiOS(iOS => iOS.FinishedLaunching((App, launchOptions) => {
                         Firebase.Core.App.Configure();
+                         Firebase.Crashlytics.Crashlytics.SharedInstance.Init();
+                    Firebase.Crashlytics.Crashlytics.SharedInstance.SetCrashlyticsCollectionEnabled(true);
+                    Firebase.Crashlytics.Crashlytics.SharedInstance.SendUnsentReports();
                         return false;   
                 }));
 #endif
@@ -29,6 +32,7 @@ namespace mauinewfirebase
                     events.AddAndroid(android => android.OnCreate((activity, bundle) =>
                     {
                         Firebase.FirebaseApp.InitializeApp(activity);
+
                     }));                    
 #endif
 

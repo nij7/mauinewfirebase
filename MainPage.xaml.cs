@@ -18,8 +18,16 @@ namespace mauinewfirebase
 
 
         }
+        int zero = 0;
+        private void crashlyticsLog_Clicked(object sender, EventArgs e)
+        {
 
+                var divisionByZero = 10 / zero;
+            
+
+        }
 
     }
+
 
 }

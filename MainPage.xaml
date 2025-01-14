@@ -29,6 +29,11 @@
                  Text="Analytics Log"
                  Clicked="AnalyticsLog_Clicked"
                  HorizontalOptions="Fill" />
+            <Button 
+                x:Name="crashlyticsLog"
+                Text="Crashlytics Log"
+                Clicked="crashlyticsLog_Clicked"
+                HorizontalOptions="Fill" />
         </VerticalStackLayout>
     </ScrollView>
 
